@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto con Tailwind CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <div class="text-white font-bold text-xl">EJERCICIOS DE TAILWIND</div>
+          <button id="menu-toggle" class="text-white md:hidden">
+            
+          </button>
+          <ul id="menu" class="hidden md:flex space-x-4 text-white">
+            <li><a href="ejer_1.html" class="hover:underline">Ejercicio 1</a></li>
+            <li><a href="ejer_2.html" class="hover:underline">Ejercicio 2</a></li>
+            <li><a href="ejer_3.html" class="hover:underline">Ejercicio 3</a></li>
+            <li><a href="ejer_4.html" class="hover:underline">Ejercicio 4</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      
+      <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+          const menu = document.getElementById('menu');
+          menu.classList.toggle('hidden');
+        });
+      </script>
+
+
+
+
+</body>
+</html>
