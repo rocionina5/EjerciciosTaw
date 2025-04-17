@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto con Tailwind CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <div class="text-white font-bold text-xl"> EJERCICIOS DE TAILWIND</div>
+          <button id="menu-toggle" class="text-white md:hidden">
+            
+          </button>
+          <ul id="menu" class="hidden md:flex space-x-4 text-white">
+            <li><a href="ejer_1.html" class="hover:underline">Ejercicio 1</a></li>
+            <li><a href="ejer_2.html" class="hover:underline">Ejercicio 2</a></li>
+            <li><a href="ejer_3.html" class="hover:underline">Ejercicio 3</a></li>
+            <li><a href="ejer_4.html" class="hover:underline">Ejercicio 4</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      
+      <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+          const menu = document.getElementById('menu');
+          menu.classList.toggle('hidden');
+        });
+      </script>
+
+    
+<form class="max-w-md mx-auto bg-white p-8 rounded shadow" action="#" method="POST">
+    <label class="block mb-2 text-sm font-medium text-gray-700" for="nombre">Nombre</label>
+    <input
+      class="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      type="text"
+      id="nombre"
+      name="nombre"
+      placeholder="Nombre"
+      required
+    />
+  
+    <label class="block mb-2 text-sm font-medium text-gray-700" for="correo">Correo</label>
+    <input
+      class="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      type="email"
+      id="correo"
+      name="correo"
+      placeholder="correo@ejemplo.com"
+      required
+    />
+  
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Enviar</button>
+  </form>
+  
+</body>
+</html>
